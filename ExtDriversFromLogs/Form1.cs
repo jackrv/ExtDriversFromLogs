@@ -14,6 +14,11 @@ namespace ExtDriversFromLogs
 {
     public partial class Form1 : Form
     {
+        string language = "Rus";
+        string message_cCase_tooltip = "С учетом регистра";
+        string message_errorWriteToReg = "Не удалось сохранить данные в реестр: ";
+        string message_errorFileOpen = "Не удалось открыть файл: ";
+        string message_errorFileLoad = "Файл логов {0} не обнаружен!";
         Dictionary<string, string> drivers = new Dictionary<string, string>();
         public void openFile(string path)
         {
@@ -36,10 +41,9 @@ namespace ExtDriversFromLogs
                     }
                 }
                 load_list(nameBox.Text);
-                //MessageBox.Show("Найдено " + drivers.Count + " водителей!", "Информация", MessageBoxButtons.OK);
             }
             else
-                MessageBox.Show("Файл логов " + path + " не обнаружен!", "Ошибка открытия", MessageBoxButtons.OK);
+                MessageBox.Show(string.Format(message_errorFileLoad, path));
         }
 
         public Form1()
@@ -88,7 +92,7 @@ namespace ExtDriversFromLogs
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Не удалось загрузить файл: " + ex.Message);
+                    MessageBox.Show(message_errorFileOpen + ex.Message);
                 }
             }
         }
@@ -142,7 +146,12 @@ namespace ExtDriversFromLogs
                     nameBox.Text = (string)readKey.GetValue("tag");
                     this.StartPosition = FormStartPosition.Manual;
                     this.Location = new System.Drawing.Point((int)readKey.GetValue("pos_x"), (int)readKey.GetValue("pos_y"));
-
+                    if ((string)readKey.GetValue("lang") == "Eng")
+                        changeLang("Eng");
+                    else if ((string)readKey.GetValue("lang") == "Ukr")
+                        changeLang("Ukr");
+                    else
+                        changeLang("Rus");
                     readKey.Close();
                 }
             }
@@ -158,23 +167,88 @@ namespace ExtDriversFromLogs
                 saveKey.SetValue("cCase", checkBox1.Checked);
                 saveKey.SetValue("pos_x", this.Location.X);
                 saveKey.SetValue("pos_y", this.Location.Y);
+                saveKey.SetValue("lang", language);
                 saveKey.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Не удалось сохранить данные в реестра: " + ex.Message);
+                MessageBox.Show(message_errorWriteToReg + ex.Message);
             }
         }
 
         private void checkBox1_MouseMove(object sender, MouseEventArgs e)
         {
-            toolTip1.Show("С учетом регистра", this.checkBox1);
+            toolTip1.Show(message_cCase_tooltip, this.checkBox1);
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             listView1.Items.Clear();
             load_list(nameBox.Text);
+        }
+
+        private void changeLang(string lang)
+        {
+            switch (lang)
+            {
+                case "Eng":
+                    label3.BorderStyle = label4.BorderStyle = BorderStyle.None;
+                    label2.BorderStyle = BorderStyle.Fixed3D;
+                    button1.Text = "Exit";
+                    groupBox1.Text = "Open log";
+                    openButton1.Text = "From today";
+                    вчераToolStripMenuItem.Text = "From yesterday";
+                    другаяДатаToolStripMenuItem.Text = "Another date";
+                    columnHeader2.Text = "Game nickname";
+                    message_cCase_tooltip = "Case sensitive characters";
+                    message_errorFileOpen = "Don't open file: ";
+                    message_errorFileLoad = "Log file {0} don't exist";
+                    language = "Eng";
+
+                    break;
+                case "Rus":
+                    label2.BorderStyle = label4.BorderStyle = BorderStyle.None;
+                    label3.BorderStyle = BorderStyle.Fixed3D;
+                    button1.Text = "Выход";
+                    groupBox1.Text = "Открыть лог";
+                    openButton1.Text = "Сегодняшний";
+                    вчераToolStripMenuItem.Text = "Вчерашний";
+                    другаяДатаToolStripMenuItem.Text = "Другая дата";
+                    columnHeader2.Text = "Игровой никнейм";
+                    message_cCase_tooltip = "С учетом регистра символов";
+                    message_errorFileOpen = "Не удалось открыть файл: ";
+                    message_errorFileLoad = "Файл логов {0} не обнаружен!";
+                    language = "Rus";
+                    break;
+                case "Ukr":
+                    label2.BorderStyle = label3.BorderStyle = BorderStyle.None;
+                    label4.BorderStyle = BorderStyle.Fixed3D;
+                    button1.Text = "Вихід";
+                    groupBox1.Text = "Відкрити лог";
+                    openButton1.Text = "Сьогоднішній";
+                    вчераToolStripMenuItem.Text = "Вчорашній";
+                    другаяДатаToolStripMenuItem.Text = "Інша дата";
+                    columnHeader2.Text = "Ігровий нікнейм";
+                    message_cCase_tooltip = "З урахуванням регістру символів";
+                    message_errorFileOpen = "Не вдалось відкрити файл: ";
+                    message_errorFileLoad = "Файл логів {0} не знайдений!";
+                    language = "Ukr";
+                    break;
+            }
+        }
+        private void label2_Click(object sender, EventArgs e)
+        {
+            changeLang("Eng");
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            changeLang("Rus");
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            changeLang("Ukr");
         }
     }
 }
