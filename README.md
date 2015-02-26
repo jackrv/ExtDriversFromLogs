@@ -13,6 +13,4 @@
 
 ***
 
-[Скачать](http://rghost.ru/6znrMJgXB)
-
-[VirusTotal](https://www.virustotal.com/ru/file/1a04d2237339792d68bd057431a622cf251c408bcc6356a545284eba683c5eb5/analysis/1424966977/)
+[Скачать](https://yadi.sk/d/_Rm7_14yeuhfa)
