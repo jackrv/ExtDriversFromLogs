@@ -10,12 +10,6 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.IO;
 
-
-/*
- * Test github 
- * Test github
- * Test github
-*/
 namespace ExtDriversFromLogs
 {
     public partial class Form1 : Form
@@ -137,18 +131,20 @@ namespace ExtDriversFromLogs
             try
             {
                 Microsoft.Win32.RegistryKey readKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("software\\extdfl");
-                string tag = (string)readKey.GetValue("tag");
-                string registry = (string)readKey.GetValue("registry");
-                int pos_x = (int)readKey.GetValue("pos_x");
-                int pos_y = (int)readKey.GetValue("pos_y");
-                readKey.Close();
-                nameBox.Text = tag;
-                if (registry == "True")
-                    checkBox1.Checked = true;
-                else
-                    checkBox1.Checked = false;
+                if (readKey != null)
+                {
 
-                this.Location = new System.Drawing.Point(pos_x, pos_y);
+                    if ((string)readKey.GetValue("cCase") == "True")
+                        checkBox1.Checked = true;
+                    else
+                        checkBox1.Checked = false;
+
+                    nameBox.Text = (string)readKey.GetValue("tag");
+                    this.StartPosition = FormStartPosition.Manual;
+                    this.Location = new System.Drawing.Point((int)readKey.GetValue("pos_x"), (int)readKey.GetValue("pos_y"));
+
+                    readKey.Close();
+                }
             }
             catch { }
         }
@@ -159,14 +155,14 @@ namespace ExtDriversFromLogs
             {
                 Microsoft.Win32.RegistryKey saveKey = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("software\\extdfl");
                 saveKey.SetValue("tag", nameBox.Text);
-                saveKey.SetValue("registry", checkBox1.Checked);
+                saveKey.SetValue("cCase", checkBox1.Checked);
                 saveKey.SetValue("pos_x", this.Location.X);
                 saveKey.SetValue("pos_y", this.Location.Y);
                 saveKey.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Не удалось загрузить данные из реестра: " + ex.Message);
+                MessageBox.Show("Не удалось сохранить данные в реестра: " + ex.Message);
             }
         }
 
