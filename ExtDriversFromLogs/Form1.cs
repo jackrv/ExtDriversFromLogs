@@ -40,6 +40,9 @@ namespace ExtDriversFromLogs
                         drivers.Add(match.Groups["id"].Value, match.Groups["name"].Value);
                     }
                 }
+                rgx = new Regex(@".*\\log_spawning_(?<date>.*?).log");
+                this.Text = "ExtDfL (MP) - [" + rgx.Matches(path)[0].Groups[1].Value.Replace("_", " ") + "]";
+
                 load_list(nameBox.Text);
             }
             else
