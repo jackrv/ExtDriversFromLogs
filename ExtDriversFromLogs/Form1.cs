@@ -30,7 +30,7 @@ namespace ExtDriversFromLogs
             {
                 string lines = File.ReadAllText(path, Encoding.Default);
 
-                string pattern = @"\[.*\]\sSpawning\sGameTrailer\s\((?<name>.*?)\s\|\s(?<id>7656119[0-9]{10}$?)\)";
+                string pattern = @"\[.*\]\sSpawning\sGameTruck\s\((?<name>[\s\S]*?)\s\|\s(?<id>7656119[0-9]{10}$?)\)";
 
                 Regex rgx = new Regex(pattern);
                 foreach (Match match in rgx.Matches(lines))
