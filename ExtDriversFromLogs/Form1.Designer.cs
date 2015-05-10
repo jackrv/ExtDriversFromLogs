@@ -99,7 +99,7 @@
             // columnHeader3
             // 
             this.columnHeader3.Tag = "";
-            this.columnHeader3.Text = "SteamID";
+            this.columnHeader3.Text = "ETS2MPID";
             this.columnHeader3.Width = 120;
             // 
             // button1
