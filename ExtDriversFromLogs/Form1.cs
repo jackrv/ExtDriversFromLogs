@@ -28,9 +28,10 @@ namespace ExtDriversFromLogs
 
             if (File.Exists(path))
             {
-                string lines = File.ReadAllText(path, Encoding.Default);
+                string lines = File.ReadAllText(path, Encoding.Unicode);
 
                 string pattern = @"\[.*\]\sSpawning\sGameTruck\s\((?<name>[\s\S]*?)\s\-\sETS2MPId:(?<id>\d*?)\)";
+                // \((?<gameid>\d*?)\)
 
                 Regex rgx = new Regex(pattern);
                 foreach (Match match in rgx.Matches(lines))
