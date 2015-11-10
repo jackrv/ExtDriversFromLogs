@@ -30,7 +30,7 @@ namespace ExtDriversFromLogs
             {
                 string lines = File.ReadAllText(path, Encoding.Unicode);
 
-                string pattern = @"\[.*\]\sSpawning\sGameTruck\s\((?<name>[\s\S]*?)\s\-\sETS2MPId:(?<id>\d*?)\)";
+                string pattern = @"\[.*\]\sSpawning\sGameTruck\s\((?<name>[\s\S]*?)\s\-\sETS2MPId:(?<id>\d*?)\s-\sTag:.*\)";
                 // \((?<gameid>\d*?)\)
 
                 Regex rgx = new Regex(pattern);
