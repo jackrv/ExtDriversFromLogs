@@ -1,7 +1,65 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ExtDriversFromLogs.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Language" Type="System.Xml.XmlDocument" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;Language name="English"&gt;
+  &lt;mainForm&gt;
+    &lt;colTruck&gt;Truck&lt;/colTruck&gt;
+    &lt;colTag&gt;Tag&lt;/colTag&gt;
+    &lt;colNickname&gt;Game Nickname&lt;/colNickname&gt;
+    &lt;colGameID&gt;Game ID&lt;/colGameID&gt;
+    &lt;groupOpen&gt;Open log&lt;/groupOpen&gt;
+    &lt;btnOpen&gt;Form today&lt;/btnOpen&gt;
+    &lt;btnOpenYesterday&gt;From yesterday&lt;/btnOpenYesterday&gt;
+    &lt;btnOpenAnother&gt;Open file&lt;/btnOpenAnother&gt;
+    &lt;groupSearch&gt;Search&lt;/groupSearch&gt;
+    &lt;btnOptions&gt;Options&lt;/btnOptions&gt;
+    &lt;btnExit&gt;Exit&lt;/btnExit&gt;
+    &lt;menuOpenProfile&gt;Open profile&lt;/menuOpenProfile&gt;
+    &lt;menuCopyName&gt;Copy nickname&lt;/menuCopyName&gt;
+    &lt;menuCopyID&gt;Copy ID&lt;/menuCopyID&gt;
+  &lt;/mainForm&gt;
+  &lt;optionsForm&gt;
+    &lt;tabMain&gt;Main&lt;/tabMain&gt;
+    &lt;tabAdv&gt;Advanced&lt;/tabAdv&gt;
+    &lt;groupLanguage&gt;Language&lt;/groupLanguage&gt;
+    &lt;groupOptionSearch&gt;Search options&lt;/groupOptionSearch&gt;
+    &lt;chckById&gt;Search by ID&lt;/chckById&gt;
+    &lt;chckByTag&gt;Search by Tag&lt;/chckByTag&gt;
+    &lt;chckCCase&gt;Case sensitive characters&lt;/chckCCase&gt;
+    &lt;btnSave&gt;Save&lt;/btnSave&gt;
+    &lt;groupRegLine&gt;Regular expression line&lt;/groupRegLine&gt;
+    &lt;lblRegAttention&gt;Do not modify unless you know what it is!&lt;/lblRegAttention&gt;
+    &lt;btnRestore&gt;Restore parameters&lt;/btnRestore&gt;
+  &lt;/optionsForm&gt;
+  &lt;messages&gt;
+    &lt;msgNoFile&gt;Log file {0} don't exist!&lt;/msgNoFile&gt;
+    &lt;msgEnterToRegLine&gt;Attention, this string can break the program!&lt;/msgEnterToRegLine&gt;
+  &lt;/messages&gt;
+&lt;/Language&gt;</Value>
+    </Setting>
+    <Setting Name="regPattern" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\[(?&lt;tHours&gt;[\d{2}]+):(?&lt;tMinutes&gt;[\d{2}]+):(?&lt;tSeconds&gt;[\d{2}]+)\]\s+Spawning\s+GameTruck\s+\((?&lt;name&gt;.+)\((?&lt;gameID&gt;\d+)\)\s+-\s+ETS2MPId:(?&lt;ets2mpID&gt;\d+)(?&lt;adInfo&gt;.*)\)\s+Additional\s+data:\s+(?&lt;adData&gt;.+)[\s\S]\[00\]\s+.+\s+.\/def\/vehicle\/truck\/(?&lt;truck&gt;.+)\/data.sii.</Value>
+    </Setting>
+    <Setting Name="windowPositon" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">400, 200</Value>
+    </Setting>
+    <Setting Name="windowSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">700, 300</Value>
+    </Setting>
+    <Setting Name="chckCCase" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="txtSearchLine" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="chckSearchByID" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="chckSearchByTag" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>
