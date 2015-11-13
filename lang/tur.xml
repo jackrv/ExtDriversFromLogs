@@ -27,7 +27,7 @@
         <btnSave>Kaydet</btnSave>
         <groupRegLine>Düzen biçimi satırı</groupRegLine>
         <lblRegAttention>Ne olduğunu bilmiyorsanız bu alanda değişiklik yapmayın!</lblRegAttention>
-        <msgEnterToRegLine>Attention, this string can break the program!</msgEnterToRegLine>
-        <btnRestore>Restore parameters</btnRestore>
+        <msgEnterToRegLine>Dikkat, bu dizi uygulamanın hata vermesine neden olabilir!</msgEnterToRegLine>
+        <btnRestore>Değerleri sıfırla</btnRestore>
     </optionsForm>
 </Language>
