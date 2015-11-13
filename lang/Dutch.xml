@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Language name="Dutch">
+    <mainForm>
+        <colTruck>Vrachtwagen</colTruck>
+        <colTag>Tag</colTag>
+        <colNickname>Spelersnaam</colNickname>
+        <colGameID>Spel ID</colGameID>
+        <groupOpen>Open log</groupOpen>
+        <btnOpen>Van vandaag</btnOpen>
+        <btnOpenYesterday>Van gister</btnOpenYesterday>
+        <btnOpenAnother>Open bestand</btnOpenAnother>
+        <groupSearch>Zoeken</groupSearch>
+        <btnOptions>Opties</btnOptions>
+        <btnExit>Afsluiten</btnExit>
+        <menuOpenProfile>Open profiel</menuOpenProfile>
+        <menuCopyName>Kopieer spelersnaam</menuCopyName>
+        <menuCopyID>Kopieer ID</menuCopyID>
+    </mainForm>
+    <optionsForm>
+        <tabMain>Algemeen</tabMain>
+        <tabAdv>Geavanceerd</tabAdv>
+        <groupLanguage>Taal</groupLanguage>
+        <groupOptionSearch>Zoek opties</groupOptionSearch>
+        <chckById>Zoeken op ID</chckById>
+        <chckByTag>Zoeken op Tag</chckByTag>
+        <chckCCase>Hoofdlettergevoelige karakters</chckCCase>
+        <btnSave>Save</btnSave>
+        <groupRegLine>Regular expression lijn</groupRegLine>
+        <lblRegAttention>Niet aanpassen tenzij je weet wat het doet!</lblRegAttention>
+        <btnRestore>Parameters herstellen</btnRestore>
+    </optionsForm>
+    <messages>
+        <msgNoFile>Log bestand {0} bestaat niet!</msgNoFile>
+        <msgEnterToRegLine>Waarschuwing, deze tekstregel kan het programma beschadigen!</msgEnterToRegLine>
+    </messages>
+</Language>
