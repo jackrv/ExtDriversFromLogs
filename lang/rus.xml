@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Language name="Русский">
+    <mainForm>
+        <colTruck>Тягач</colTruck>
+        <colTag>Тег</colTag>
+        <colNickname>Игровой ник</colNickname>
+        <colGameID>Игр. ID</colGameID>
+        <groupOpen>Открыть лог</groupOpen>
+        <btnOpen>Сегодняшний</btnOpen>
+        <btnOpenYesterday>Вчерашний</btnOpenYesterday>
+        <btnOpenAnother>Выбрать файл</btnOpenAnother>
+        <groupSearch>Поиск</groupSearch>
+        <btnOptions>Настройки</btnOptions>
+        <btnExit>Выход</btnExit>
+        <menuOpenProfile>Открыть профиль</menuOpenProfile>
+        <menuCopyName>Скопировать ник</menuCopyName>
+        <menuCopyID>Скопировать ID</menuCopyID>
+    </mainForm>
+    <optionsForm>
+        <tabMain>Общие</tabMain>
+        <tabAdv>Разширенные</tabAdv>
+        <groupLanguage>Язык</groupLanguage>
+        <groupOptionSearch>Параметры поиска</groupOptionSearch>
+        <chckById>Искать по ID</chckById>
+        <chckByTag>Искать по тегу</chckByTag>
+        <chckCCase>С учетом регистра</chckCCase>
+        <btnSave>Сохранить</btnSave>
+        <groupRegLine>Строка регулярного выражения</groupRegLine>
+        <lblRegAttention>Не трожь если не понимаешь что это!</lblRegAttention>
+        <btnRestore>Восстановить настройки</btnRestore>
+    </optionsForm>
+    <messages>
+        <msgNoFile>Файл {0} не существует!</msgNoFile>
+        <msgEnterToRegLine>Имейте ввиду, эта строка напрямую влияет на работу программы!</msgEnterToRegLine>
+    </messages>
+</Language>

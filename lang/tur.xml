@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Language name="Turkish">
+    <mainForm>
+        <colTruck>Araç</colTruck>
+        <colTag>Oyuncu Tagı</colTag>
+        <colNickname>Oyuncu adı</colNickname>
+        <colGameID>Oyun ID Numarası</colGameID>
+        <groupOpen>Kayıt günlüklerini aç</groupOpen>
+        <btnOpen>Bugüne ait</btnOpen>
+        <btnOpenYesterday>Düne ait</btnOpenYesterday>
+        <btnOpenAnother>Farklı bir tarih seç</btnOpenAnother>
+        <groupSearch>Arama</groupSearch>
+        <btnOptions>Ayarlar</btnOptions>
+        <btnExit>Kapat</btnExit>
+        <menuOpenProfile>Profili aç</menuOpenProfile>
+        <menuCopyName>Kullanıcı adını kopyala</menuCopyName>
+        <menuCopyID>ID Numarasını kopyala</menuCopyID>
+    </mainForm>
+    <optionsForm>
+        <tabMain>Genel</tabMain>
+        <tabAdv>Gelişmiş</tabAdv>
+        <groupLanguage>Dil seçiniz</groupLanguage>
+        <groupOptionSearch>Arama ayarları</groupOptionSearch>
+        <chckById>Oyun ID numarası ile ara</chckById>
+        <chckByTag>Oyuncu etiketi ile ara</chckByTag>
+        <chckCCase>Büyük/küçük harf duyarlı</chckCCase>
+        <btnSave>Kaydet</btnSave>
+        <groupRegLine>Düzen biçimi satırı</groupRegLine>
+        <lblRegAttention>Ne olduğunu bilmiyorsanız bu alanda değişiklik yapmayın!</lblRegAttention>
+        <msgEnterToRegLine>Attention, this string can break the program!</msgEnterToRegLine>
+        <btnRestore>Restore parameters</btnRestore>
+    </optionsForm>
+</Language>

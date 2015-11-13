@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Language name="English">
+    <mainForm>
+        <colTruck>Truck</colTruck>
+        <colTag>Tag</colTag>
+        <colNickname>Game Nickname</colNickname>
+        <colGameID>Game ID</colGameID>
+        <groupOpen>Open log</groupOpen>
+        <btnOpen>Form today</btnOpen>
+        <btnOpenYesterday>From yesterday</btnOpenYesterday>
+        <btnOpenAnother>Open file</btnOpenAnother>
+        <groupSearch>Search</groupSearch>
+        <btnOptions>Options</btnOptions>
+        <btnExit>Exit</btnExit>
+        <menuOpenProfile>Open profile</menuOpenProfile>
+        <menuCopyName>Copy nickname</menuCopyName>
+        <menuCopyID>Copy ID</menuCopyID>
+    </mainForm>
+    <optionsForm>
+        <tabMain>Main</tabMain>
+        <tabAdv>Advanced</tabAdv>
+        <groupLanguage>Language</groupLanguage>
+        <groupOptionSearch>Search options</groupOptionSearch>
+        <chckById>Search by ID</chckById>
+        <chckByTag>Search by Tag</chckByTag>
+        <chckCCase>Case sensitive characters</chckCCase>
+        <btnSave>Save</btnSave>
+        <groupRegLine>Regular expression line</groupRegLine>
+        <lblRegAttention>Do not modify unless you know what it is!</lblRegAttention>
+        <btnRestore>Restore parameters</btnRestore>
+    </optionsForm>
+    <messages>
+        <msgNoFile>Log file {0} don't exist!</msgNoFile>
+        <msgEnterToRegLine>Attention, this string can break the program!</msgEnterToRegLine>
+    </messages>
+</Language>
