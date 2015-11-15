@@ -18,7 +18,7 @@
     </mainForm>
     <optionsForm>
         <tabMain>Общие</tabMain>
-        <tabAdv>Разширенные</tabAdv>
+        <tabAdv>Расширенные</tabAdv>
         <groupLanguage>Язык</groupLanguage>
         <groupOptionSearch>Параметры поиска</groupOptionSearch>
         <chckById>Искать по ID</chckById>

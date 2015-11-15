@@ -30,7 +30,7 @@
         <btnRestore>Restore parameters</btnRestore>
     </optionsForm>
     <messages>
-        <msgNoFile>Log file {0} don't exist!</msgNoFile>
+        <msgNoFile>Log file {0} doesn't exist!</msgNoFile>
         <msgEnterToRegLine>Attention, this string can break the program!</msgEnterToRegLine>
     </messages>
 </Language>
