@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Language name="Español">
+    <mainForm>
+        <colTruck>Camión</colTruck>
+        <colTag>Tag</colTag>
+        <colNickname>Nickname</colNickname>
+        <colGameID>ID Juego</colGameID>
+        <groupOpen>Abrir Log</groupOpen>
+        <btnOpen>Desde hoy</btnOpen>
+        <btnOpenYesterday>Desde ayer</btnOpenYesterday>
+        <btnOpenAnother>Abrir archivo</btnOpenAnother>
+        <groupSearch>Buscar</groupSearch>
+        <btnOptions>Opciones</btnOptions>
+        <btnExit>Salir</btnExit>
+        <menuOpenProfile>Abrir perfil</menuOpenProfile>
+        <menuCopyName>Copiar nickname</menuCopyName>
+        <menuCopyID>Copiar ID</menuCopyID>
+    </mainForm>
+    <optionsForm>
+        <tabMain>Principal</tabMain>
+        <tabAdv>Avanzado</tabAdv>
+        <groupLanguage>Idioma</groupLanguage>
+        <groupOptionSearch>Opciones de búsqueda</groupOptionSearch>
+        <chckById>Buscar por ID</chckById>
+        <chckByTag>Buscar por Tag</chckByTag>
+        <chckCCase>Caracteres sensibles a mayúsculas</chckCCase>
+        <btnSave>Guardar</btnSave>
+        <groupRegLine>Linea de expresión regular</groupRegLine>
+        <lblRegAttention>¡No modifiques a no ser que sepas lo que haces!</lblRegAttention>
+        <btnRestore>Restaurar parámetros</btnRestore>
+    </optionsForm>
+    <messages>
+        <msgNoFile>¡El archivo de log {0} no existe!</msgNoFile>
+        <msgEnterToRegLine>¡Atención, esta cadena de texto puede estropear el programa!</msgEnterToRegLine>
+    </messages>
+</Language>
