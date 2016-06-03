@@ -33,7 +33,7 @@ namespace ExtDriversFromLogs.Properties {
     <colNickname>Game Nickname</colNickname>
     <colGameID>Game ID</colGameID>
     <groupOpen>Open log</groupOpen>
-    <btnOpen>Form today</btnOpen>
+    <btnOpen>From today</btnOpen>
     <btnOpenYesterday>From yesterday</btnOpenYesterday>
     <btnOpenAnother>Open file</btnOpenAnother>
     <groupSearch>Search</groupSearch>
