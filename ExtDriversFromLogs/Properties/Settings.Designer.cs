@@ -72,7 +72,7 @@ namespace ExtDriversFromLogs.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"\[(?<tHours>[\d{2}]+):(?<tMinutes>[\d{2}]+):(?<tSeconds>[\d{2}]+)\]\s+Spawning\s+GameTruck\s+\((?<name>.+)\((?<gameID>\d+)\)\s+-\s+TruckersMP ID:(?<ets2mpID>\d+)(?<adInfo>.*)\)\s+Additional\s+data:\s+(?<adData>.+)[\s\S]\[00\]\s+.+\s+.\/def\/vehicle\/truck\/(?<truck>.+)\/data.sii.")]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"\[(?<tHours>[\d{2}]+):(?<tMinutes>[\d{2}]+):(?<tSeconds>[\d{2}]+)\]\s+Spawning\s+GameTruck\s+\((?<name>.+)\((?<gameID>\d+)\)\s+-\s+TruckersMP\s+ID:(?<ets2mpID>\d+)(?<adInfo>.*)\)\s+Additional\s+data:\s+(?<adData>.+)[\s\S]\[00\]\s+.+\s+.\/def\/vehicle\/truck\/(?<truck>.+)\/data.sii.")]
         public string regPattern {
             get {
                 return ((string)(this["regPattern"]));
