@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Language name="German">
+    <mainForm>
+        <colTruck>LKW</colTruck>
+        <colTag>Tag</colTag>
+        <colNickname>Nickname</colNickname>
+        <colGameID>Spiel-ID</colGameID>
+        <groupOpen>Öffne Log</groupOpen>
+        <btnOpen>Heute</btnOpen>
+        <btnOpenYesterday>Gestern</btnOpenYesterday>
+        <btnOpenAnother>Öffne Datei</btnOpenAnother>
+        <groupSearch>Suchen</groupSearch>
+        <btnOptions>Optionen</btnOptions>
+        <btnExit>Zurück</btnExit>
+        <menuOpenProfile>Profil öffnen</menuOpenProfile>
+        <menuCopyName>Nickname kopieren</menuCopyName>
+        <menuCopyID>ID kopieren</menuCopyID>
+    </mainForm>
+    <optionsForm>
+        <tabMain>Main</tabMain>
+        <tabAdv>Advanced</tabAdv>
+        <groupLanguage>Language</groupLanguage>
+        <groupOptionSearch>Sucheinstellungen</groupOptionSearch>
+        <chckById>Suche nach ID</chckById>
+        <chckByTag>Suche nach Tag</chckByTag>
+        <chckCCase>Groß-Kleinschreibung beachten</chckCCase>
+        <btnSave>Speichern</btnSave>
+        <groupRegLine>Reguläre "expression" Linie</groupRegLine>
+        <lblRegAttention>NICHT BEARBEITEN, außer du weißt was du tust!</lblRegAttention>
+        <btnRestore>Parameter wiederherstellen</btnRestore>
+    </optionsForm>
+    <messages>
+        <msgNoFile>Log-Datei {0} existiert nicht!</msgNoFile>
+        <msgEnterToRegLine>ACHTUNG, diese Linie kann einen Programmabsturz hervorrufen!</msgEnterToRegLine>
+    </messages>
+</Language>
