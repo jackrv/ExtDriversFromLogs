@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Language name="Polish">
+    <mainForm>
+        <colTruck>Ciężarówka</colTruck>
+        <colTag>Tag</colTag>
+        <colNickname>Nazwa gracza</colNickname>
+        <colGameID>ID gracza</colGameID>
+        <groupOpen>Otwórz log</groupOpen>
+        <btnOpen>Z dzisiaj</btnOpen>
+        <btnOpenYesterday>Z wczoraj</btnOpenYesterday>
+        <btnOpenAnother>Otwórz plik</btnOpenAnother>
+        <groupSearch>Wyszukaj</groupSearch>
+        <btnOptions>Opcje</btnOptions>
+        <btnExit>Wyjdź</btnExit>
+        <menuOpenProfile>Otwórz profil</menuOpenProfile>
+        <menuCopyName>Kopiuj nazwę gracza</menuCopyName>
+        <menuCopyID>Kopiuj ID</menuCopyID>
+    </mainForm>
+    <optionsForm>
+        <tabMain>Główne</tabMain>
+        <tabAdv>Zaawansowane</tabAdv>
+        <groupLanguage>Język</groupLanguage>
+        <groupOptionSearch>Opcje wyszukania</groupOptionSearch>
+        <chckById>Wyszukaj po ID</chckById>
+        <chckByTag>Wyszukaj po Tag</chckByTag>
+        <chckCCase>Wielkość liter</chckCCase>
+        <btnSave>Zapisz</btnSave>
+        <groupRegLine>Główne wyrażenie</groupRegLine>
+        <lblRegAttention>Nie modyfikuj o ile nie wiesz co to jest!</lblRegAttention>
+        <btnRestore>Przywróć domyślne</btnRestore>
+    </optionsForm>
+    <messages>
+        <msgNoFile>Log {0} nie istnieje!</msgNoFile>
+        <msgEnterToRegLine>OSTRZEŻENIE! Zmiana tego parametru może spowodować problem z działaniem programu!</msgEnterToRegLine>
+    </messages>
+</Language>

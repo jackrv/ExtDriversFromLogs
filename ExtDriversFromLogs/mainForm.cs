@@ -9,6 +9,7 @@ using System.Text.RegularExpressions;
 
 namespace ExtDriversFromLogs
 {
+   
     public partial class mainForm : Form
     {
         string currentLanguage;
@@ -51,10 +52,10 @@ namespace ExtDriversFromLogs
                             truckName = "MAN TGX";
                             break;
                         case "mercedes.actros":
-                            truckName = "Mersedes Actros";
+                            truckName = "Mercedes Actros";
                             break;
                         case "mercedes.actros2014":
-                            truckName = "Mersedes New Actros";
+                            truckName = "Mercedes New Actros";
                             break;
                         case "renault.magnum":
                             truckName = "Renault Magnum";
@@ -74,13 +75,26 @@ namespace ExtDriversFromLogs
                         case "volvo.fh16_2012":
                             truckName = "Volvo FH16 (2012)";
                             break;
+                        case "skoda.superb":
+                            truckName = "Scout Super_D";
+                            break;
+                        case "peterbilt.579":
+                            truckName = "Peterbilt 579";
+                            break;
+                        case "kenworth.t680":
+                            truckName = "Kenworth T680";
+                            break;
+                        case "kenworth.w900":
+                            truckName = "Kenworth W900";
+                            break;
                     }
                 }
             }
         }
-
+        public bool ATS = false;
         public mainForm()
         {
+            
             InitializeComponent();
             localize();
         }
@@ -228,7 +242,7 @@ namespace ExtDriversFromLogs
 
         private void lstDrivers_DoubleClick(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://ets2mp.com/index.php?page=profile&id=" + lstDrivers.FocusedItem.SubItems[5].Text);
+            System.Diagnostics.Process.Start("http://truckersmp.com/en_US/user/" + lstDrivers.FocusedItem.SubItems[5].Text);
         }
 
         private void lstDrivers_MouseClick(object sender, MouseEventArgs e)
@@ -257,7 +271,7 @@ namespace ExtDriversFromLogs
         private void btnOpen_Click(object sender, EventArgs e)
         {
             string date = DateTime.Now.Date.ToString("dd_MM_yyyy");
-            string path = String.Format("{0}\\ETS2MP\\logs\\log_spawning_{1}.log", personal_dir, date);
+            string path = String.Format("{0}\\"+((ATS)?( "ATSMP" ):( "ETS2MP" )) +"\\logs\\log_spawning_{1}.log", personal_dir, date);
             openFile(path);
         }
 
@@ -269,13 +283,13 @@ namespace ExtDriversFromLogs
         private void btnOpenYesterday_Click(object sender, EventArgs e)
         {
             string date = DateTime.Now.AddDays(-1).ToString("dd_MM_yyyy");
-            string path = String.Format("{0}\\ETS2MP\\logs\\log_spawning_{1}.log", personal_dir, date);
+            string path = String.Format("{0}\\"+((ATS) ? ("ATSMP") : ("ETS2MP")) + "\\logs\\log_spawning_{1}.log", personal_dir, date);
             openFile(path);
         }
 
         private void btnOpenAnother_Click(object sender, EventArgs e)
         {
-            openFileDialog.InitialDirectory = String.Format("{0}\\ETS2MP\\logs", personal_dir);
+            openFileDialog.InitialDirectory = String.Format("{0}\\" + ((ATS) ? ("ATSMP") : ("ETS2MP")) + "\\logs", personal_dir);
             openFileDialog.Filter = "Log files|log_spawning_*.log";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -297,6 +311,16 @@ namespace ExtDriversFromLogs
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+             ATS = (comboBox1.SelectedItem.ToString() == "ATSMP");
         }
     }
 }
