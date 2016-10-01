@@ -174,7 +174,7 @@ namespace ExtDriversFromLogs
                             drivers.Add(ets2mpID, driver);
                         }
                     }
-                    rgx = new Regex(@".*\\log_spawning_(?<day>\d{2}?)_(?<month>\d{2}?)_(?<year>\d{4}?).log");
+                    rgx = new Regex(@".*\\log_spawning_(?<day>\d{2}?).(?<month>\d{2}?).(?<year>\d{4}?).log");
                     this.Text = String.Format("ExtDfL - [{0}-{1}-{2}]", rgx.Matches(path)[0].Groups["day"].Value, rgx.Matches(path)[0].Groups["month"].Value, rgx.Matches(path)[0].Groups["year"].Value);
 
                     load_list();
@@ -282,7 +282,7 @@ namespace ExtDriversFromLogs
 
         private void btnOpenYesterday_Click(object sender, EventArgs e)
         {
-            string date = DateTime.Now.AddDays(-1).ToString("dd_MM_yyyy");
+            string date = DateTime.Now.AddDays(-1).ToString("dd.MM.yyyy");
             string path = String.Format("{0}\\"+((ATS) ? ("ATSMP") : ("ETS2MP")) + "\\logs\\log_spawning_{1}.log", personal_dir, date);
             openFile(path);
         }
