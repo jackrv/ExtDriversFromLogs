@@ -46,6 +46,8 @@ namespace ExtDriversFromLogs
             setText(this.grpRegLine,    xml.SelectSingleNode("/Language/optionsForm/groupRegLine"));
             setText(this.lblAttention,  xml.SelectSingleNode("/Language/optionsForm/lblRegAttention"));
             setText(this.btnRestore,    xml.SelectSingleNode("/Language/optionsForm/btnRestore"));
+            setText(this.btnPersonalDir, xml.SelectSingleNode("/Language/optionsForm/btnPersonalDir"));
+            setText(this.grpPersonalDir, xml.SelectSingleNode("/Language/optionsForm/grpPersonalDir"));
         }
 
         private void addLanguages(string language, string file, XmlDocument xml)
@@ -88,6 +90,7 @@ namespace ExtDriversFromLogs
             chckByID.Checked    = Properties.Settings.Default.chckSearchByID;
             chckByTag.Checked   = Properties.Settings.Default.chckSearchByTag;
             chckCCase.Checked   = Properties.Settings.Default.chckCCase;
+            personalDirPath.Text = Properties.Settings.Default.personalDir;
         }
 
         private void cmbLang_SelectedIndexChanged(object sender, EventArgs e)
@@ -136,6 +139,7 @@ namespace ExtDriversFromLogs
             Properties.Settings.Default.chckSearchByTag = bool.Parse(Properties.Settings.Default.Properties["chckSearchByTag"].DefaultValue as string);
             Properties.Settings.Default.regPattern      = Properties.Settings.Default.Properties["regPattern"].DefaultValue as string;
             txtRegLine.Text     = Properties.Settings.Default.regPattern;
+            Properties.Settings.Default.personalDir = personalDirPath.Text = "";
 
             localize();
         }
@@ -143,10 +147,24 @@ namespace ExtDriversFromLogs
         private void btnSave_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.regPattern = txtRegLine.Text;
+            Properties.Settings.Default.personalDir = personalDirPath.Text;
 
             Properties.Settings.Default.Save();
             DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folderDialog = new FolderBrowserDialog();
+
+            DialogResult result = folderDialog.ShowDialog();
+
+            if (!string.IsNullOrWhiteSpace(folderDialog.SelectedPath))
+            {
+                personalDirPath.Text = folderDialog.SelectedPath;
+                Properties.Settings.Default.personalDir = folderDialog.SelectedPath;
+            }
         }
     }
 }

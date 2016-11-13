@@ -15,8 +15,7 @@ namespace ExtDriversFromLogs
         string currentLanguage;
         options settings;
         Dictionary<int, Driver> drivers = new Dictionary<int, Driver>();
-        string personal_dir = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-        
+
         private struct Driver
         {
             private string truckName;
@@ -91,7 +90,7 @@ namespace ExtDriversFromLogs
                 }
             }
         }
-        public bool ATS = false;
+
         public mainForm()
         {
             
@@ -136,6 +135,8 @@ namespace ExtDriversFromLogs
                 this.drvMenu_CopyName.Text = Properties.Settings.Default.Language.SelectSingleNode("/Language/mainForm/menuCopyName").InnerText;
             if (Properties.Settings.Default.Language.SelectSingleNode("/Language/mainForm/menuCopyID") != null)
                 this.drvMenu_CopyID.Text = Properties.Settings.Default.Language.SelectSingleNode("/Language/mainForm/menuCopyID").InnerText;
+            if (Properties.Settings.Default.Language.SelectSingleNode("/Language/mainForm/selectGame") != null)
+                this.gameGroup.Text = Properties.Settings.Default.Language.SelectSingleNode("/Language/mainForm/selectGame").InnerText;
         }
 
         private void openFile(string path)
@@ -225,10 +226,14 @@ namespace ExtDriversFromLogs
             txtSearch.Text      = Properties.Settings.Default.txtSearchLine;
             this.Size           = Properties.Settings.Default.windowSize;
             this.Location       = Properties.Settings.Default.windowPositon;
+            if (Properties.Settings.Default.gameATS)
+                radioATS.Checked = true;
+            radioETS.Checked = !radioATS.Checked;
         }
 
         private void mainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Properties.Settings.Default.gameATS         = radioATS.Checked;
             Properties.Settings.Default.txtSearchLine   = txtSearch.Text;
             Properties.Settings.Default.windowPositon   = this.Location;
             Properties.Settings.Default.windowSize      = this.Size;
@@ -237,7 +242,7 @@ namespace ExtDriversFromLogs
 
         private void mainForm_Resize(object sender, EventArgs e)
         {
-            lstDrivers.Columns[3].Width = this.Width - 565;
+            lstDrivers.Columns[3].Width = this.Width - 665;
         }
 
         private void lstDrivers_DoubleClick(object sender, EventArgs e)
@@ -270,8 +275,10 @@ namespace ExtDriversFromLogs
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
-            string date = DateTime.Now.Date.ToString("dd_MM_yyyy");
-            string path = String.Format("{0}\\"+((ATS)?( "ATSMP" ):( "ETS2MP" )) +"\\logs\\log_spawning_{1}.log", personal_dir, date);
+            string date = DateTime.Now.Date.ToString("dd.MM.yyyy");
+            string path = String.Format(((radioETS.Checked)? ("ETS2MP") : ("ATSMP")) + "\\logs\\log_spawning_{0}.log", date);
+            string personalDir = Properties.Settings.Default.personalDir == "" ? Environment.GetFolderPath(Environment.SpecialFolder.Personal) : Properties.Settings.Default.personalDir;
+            path = personalDir + "\\" + path;
             openFile(path);
         }
 
@@ -283,13 +290,15 @@ namespace ExtDriversFromLogs
         private void btnOpenYesterday_Click(object sender, EventArgs e)
         {
             string date = DateTime.Now.AddDays(-1).ToString("dd.MM.yyyy");
-            string path = String.Format("{0}\\"+((ATS) ? ("ATSMP") : ("ETS2MP")) + "\\logs\\log_spawning_{1}.log", personal_dir, date);
+            string path = String.Format(((radioETS.Checked) ? ("ETS2MP") : ("ATSMP")) + "\\logs\\log_spawning_{0}.log", date);
+            string personalDir = Properties.Settings.Default.personalDir == "" ? Environment.GetFolderPath(Environment.SpecialFolder.Personal) : Properties.Settings.Default.personalDir;
+            path = personalDir + "\\" + path;
             openFile(path);
         }
 
         private void btnOpenAnother_Click(object sender, EventArgs e)
         {
-            openFileDialog.InitialDirectory = String.Format("{0}\\" + ((ATS) ? ("ATSMP") : ("ETS2MP")) + "\\logs", personal_dir);
+            openFileDialog.InitialDirectory = String.Format(((radioETS.Checked) ? ("ETS2MP") : ("ATSMP")) + "\\logs");
             openFileDialog.Filter = "Log files|log_spawning_*.log";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -311,16 +320,6 @@ namespace ExtDriversFromLogs
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-             ATS = (comboBox1.SelectedItem.ToString() == "ATSMP");
         }
     }
 }

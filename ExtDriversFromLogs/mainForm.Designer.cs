@@ -57,12 +57,14 @@ namespace ExtDriversFromLogs
             this.drvMenu_OpenProfile = new System.Windows.Forms.ToolStripMenuItem();
             this.drvMenu_CopyName = new System.Windows.Forms.ToolStripMenuItem();
             this.drvMenu_CopyID = new System.Windows.Forms.ToolStripMenuItem();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.gameGroup = new System.Windows.Forms.GroupBox();
+            this.radioATS = new System.Windows.Forms.RadioButton();
+            this.radioETS = new System.Windows.Forms.RadioButton();
             this.cntxtOpenMenu.SuspendLayout();
             this.grpSearch.SuspendLayout();
             this.grpOpen.SuspendLayout();
             this.cntxtDriversMenu.SuspendLayout();
+            this.gameGroup.SuspendLayout();
             this.SuspendLayout();
             // 
             // fileToolStripMenuItem
@@ -181,7 +183,7 @@ namespace ExtDriversFromLogs
             // 
             this.grpSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.grpSearch.Controls.Add(this.txtSearch);
-            this.grpSearch.Location = new System.Drawing.Point(628, 93);
+            this.grpSearch.Location = new System.Drawing.Point(628, 131);
             this.grpSearch.Name = "grpSearch";
             this.grpSearch.Size = new System.Drawing.Size(144, 50);
             this.grpSearch.TabIndex = 12;
@@ -269,37 +271,46 @@ namespace ExtDriversFromLogs
             this.drvMenu_CopyID.Text = "Copy ETS2MP ID";
             this.drvMenu_CopyID.Click += new System.EventHandler(this.drvMenu_CopyID_Click);
             // 
-            // comboBox1
+            // gameGroup
             // 
-            this.comboBox1.AllowDrop = true;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "ETS2MP",
-            "ATSMP"});
-            this.comboBox1.Location = new System.Drawing.Point(634, 170);
-            this.comboBox1.MaxDropDownItems = 2;
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 15;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.gameGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gameGroup.Controls.Add(this.radioATS);
+            this.gameGroup.Controls.Add(this.radioETS);
+            this.gameGroup.Location = new System.Drawing.Point(628, 83);
+            this.gameGroup.Name = "gameGroup";
+            this.gameGroup.Size = new System.Drawing.Size(144, 43);
+            this.gameGroup.TabIndex = 15;
+            this.gameGroup.TabStop = false;
+            this.gameGroup.Text = "Select game";
             // 
-            // label1
+            // radioATS
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(656, 154);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 13);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Select game";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.radioATS.AutoSize = true;
+            this.radioATS.Location = new System.Drawing.Point(58, 17);
+            this.radioATS.Name = "radioATS";
+            this.radioATS.Size = new System.Drawing.Size(46, 17);
+            this.radioATS.TabIndex = 1;
+            this.radioATS.TabStop = true;
+            this.radioATS.Text = "ATS";
+            this.radioATS.UseVisualStyleBackColor = true;
+            // 
+            // radioETS
+            // 
+            this.radioETS.AutoSize = true;
+            this.radioETS.Location = new System.Drawing.Point(6, 17);
+            this.radioETS.Name = "radioETS";
+            this.radioETS.Size = new System.Drawing.Size(46, 17);
+            this.radioETS.TabIndex = 0;
+            this.radioETS.TabStop = true;
+            this.radioETS.Text = "ETS";
+            this.radioETS.UseVisualStyleBackColor = true;
             // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 261);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.gameGroup);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnOptions);
             this.Controls.Add(this.grpSearch);
@@ -321,8 +332,9 @@ namespace ExtDriversFromLogs
             this.grpOpen.ResumeLayout(false);
             this.grpOpen.PerformLayout();
             this.cntxtDriversMenu.ResumeLayout(false);
+            this.gameGroup.ResumeLayout(false);
+            this.gameGroup.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -354,8 +366,9 @@ namespace ExtDriversFromLogs
         private System.Windows.Forms.ToolStripMenuItem drvMenu_CopyName;
         private System.Windows.Forms.ToolStripMenuItem drvMenu_CopyID;
         private System.Windows.Forms.ToolStripMenuItem drvMenu_OpenProfile;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox gameGroup;
+        private System.Windows.Forms.RadioButton radioATS;
+        private System.Windows.Forms.RadioButton radioETS;
     }
 }
 

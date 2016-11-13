@@ -39,16 +39,20 @@
             this.grpLang = new System.Windows.Forms.GroupBox();
             this.cmbLang = new System.Windows.Forms.ComboBox();
             this.tabAdv = new System.Windows.Forms.TabPage();
+            this.grpPersonalDir = new System.Windows.Forms.GroupBox();
+            this.personalDirPath = new System.Windows.Forms.TextBox();
             this.btnRestore = new System.Windows.Forms.Button();
             this.grpRegLine = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblAttention = new System.Windows.Forms.Label();
             this.txtRegLine = new System.Windows.Forms.TextBox();
+            this.btnPersonalDir = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tabMain.SuspendLayout();
             this.grpOptions.SuspendLayout();
             this.grpLang.SuspendLayout();
             this.tabAdv.SuspendLayout();
+            this.grpPersonalDir.SuspendLayout();
             this.grpRegLine.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -151,6 +155,7 @@
             // 
             // tabAdv
             // 
+            this.tabAdv.Controls.Add(this.grpPersonalDir);
             this.tabAdv.Controls.Add(this.btnRestore);
             this.tabAdv.Controls.Add(this.grpRegLine);
             this.tabAdv.Location = new System.Drawing.Point(4, 22);
@@ -160,6 +165,24 @@
             this.tabAdv.TabIndex = 1;
             this.tabAdv.Text = "Advanced";
             this.tabAdv.UseVisualStyleBackColor = true;
+            // 
+            // grpPersonalDir
+            // 
+            this.grpPersonalDir.Controls.Add(this.btnPersonalDir);
+            this.grpPersonalDir.Controls.Add(this.personalDirPath);
+            this.grpPersonalDir.Location = new System.Drawing.Point(8, 72);
+            this.grpPersonalDir.Name = "grpPersonalDir";
+            this.grpPersonalDir.Size = new System.Drawing.Size(268, 49);
+            this.grpPersonalDir.TabIndex = 2;
+            this.grpPersonalDir.TabStop = false;
+            this.grpPersonalDir.Text = "Personal dir";
+            // 
+            // personalDirPath
+            // 
+            this.personalDirPath.Location = new System.Drawing.Point(6, 18);
+            this.personalDirPath.Name = "personalDirPath";
+            this.personalDirPath.Size = new System.Drawing.Size(174, 20);
+            this.personalDirPath.TabIndex = 0;
             // 
             // btnRestore
             // 
@@ -212,6 +235,16 @@
             this.txtRegLine.TabIndex = 0;
             this.txtRegLine.Enter += new System.EventHandler(this.txtRegLine_Enter);
             // 
+            // btnPersonalDir
+            // 
+            this.btnPersonalDir.Location = new System.Drawing.Point(186, 16);
+            this.btnPersonalDir.Name = "btnPersonalDir";
+            this.btnPersonalDir.Size = new System.Drawing.Size(75, 23);
+            this.btnPersonalDir.TabIndex = 1;
+            this.btnPersonalDir.Text = "Select dir";
+            this.btnPersonalDir.UseVisualStyleBackColor = true;
+            this.btnPersonalDir.Click += new System.EventHandler(this.button1_Click);
+            // 
             // options
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,6 +263,8 @@
             this.grpOptions.PerformLayout();
             this.grpLang.ResumeLayout(false);
             this.tabAdv.ResumeLayout(false);
+            this.grpPersonalDir.ResumeLayout(false);
+            this.grpPersonalDir.PerformLayout();
             this.grpRegLine.ResumeLayout(false);
             this.grpRegLine.PerformLayout();
             this.ResumeLayout(false);
@@ -253,6 +288,8 @@
         private System.Windows.Forms.Label lblAttention;
         private System.Windows.Forms.CheckBox chckCCase;
         private System.Windows.Forms.Button btnRestore;
-
+        private System.Windows.Forms.GroupBox grpPersonalDir;
+        private System.Windows.Forms.TextBox personalDirPath;
+        private System.Windows.Forms.Button btnPersonalDir;
     }
 }

@@ -14,6 +14,7 @@
     &lt;btnOpen&gt;Form today&lt;/btnOpen&gt;
     &lt;btnOpenYesterday&gt;From yesterday&lt;/btnOpenYesterday&gt;
     &lt;btnOpenAnother&gt;Open file&lt;/btnOpenAnother&gt;
+    &lt;selectGame&gt;Select game&lt;/selectGame&gt;
     &lt;groupSearch&gt;Search&lt;/groupSearch&gt;
     &lt;btnOptions&gt;Options&lt;/btnOptions&gt;
     &lt;btnExit&gt;Exit&lt;/btnExit&gt;
@@ -30,18 +31,17 @@
     &lt;chckByTag&gt;Search by Tag&lt;/chckByTag&gt;
     &lt;chckCCase&gt;Case sensitive characters&lt;/chckCCase&gt;
     &lt;btnSave&gt;Save&lt;/btnSave&gt;
+    &lt;grpPersonalDir&gt;Personal dir&lt;/grpPersonalDir&gt;
+    &lt;btnPersonalDir&gt;Select dir&lt;/btnPersonalDir&gt;
     &lt;groupRegLine&gt;Regular expression line&lt;/groupRegLine&gt;
     &lt;lblRegAttention&gt;Do not modify unless you know what it is!&lt;/lblRegAttention&gt;
     &lt;btnRestore&gt;Restore parameters&lt;/btnRestore&gt;
   &lt;/optionsForm&gt;
   &lt;messages&gt;
-    &lt;msgNoFile&gt;Log file {0} don't exist!&lt;/msgNoFile&gt;
+    &lt;msgNoFile&gt;Log file {0} doesn't exist!&lt;/msgNoFile&gt;
     &lt;msgEnterToRegLine&gt;Attention, this string can break the program!&lt;/msgEnterToRegLine&gt;
   &lt;/messages&gt;
 &lt;/Language&gt;</Value>
-    </Setting>
-    <Setting Name="regPattern" Type="System.String" Scope="User">
-      <Value Profile="(Default)">\[(?&lt;tHours&gt;[\d{2}]+):(?&lt;tMinutes&gt;[\d{2}]+):(?&lt;tSeconds&gt;[\d{2}]+)\]\s+Spawning\s+GameTruck\s+\((?&lt;name&gt;.+)\((?&lt;gameID&gt;\d+)\)\s+-\s+ETS2MPId:(?&lt;ets2mpID&gt;\d+)(?&lt;adInfo&gt;.*)\)\s+Additional\s+data:\s+(?&lt;adData&gt;.+)[\s\S]\[00\]\s+.+\s+.\/def\/vehicle\/truck\/(?&lt;truck&gt;.+)\/data.sii.</Value>
     </Setting>
     <Setting Name="windowPositon" Type="System.Drawing.Point" Scope="User">
       <Value Profile="(Default)">400, 200</Value>
@@ -60,6 +60,15 @@
     </Setting>
     <Setting Name="chckSearchByTag" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="regPattern" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\[(?&lt;tHours&gt;[\d{2}]+):(?&lt;tMinutes&gt;[\d{2}]+):(?&lt;tSeconds&gt;[\d{2}]+)\]\s+Spawning\s+GameTruck\s+\((?&lt;name&gt;.+)\((?&lt;gameID&gt;\d+)\)\s+-\s+TruckersMP\s+ID:(?&lt;ets2mpID&gt;\d+)(?&lt;adInfo&gt;.*)\)\s+Additional\s+data:\s+(?&lt;adData&gt;.+)[\s\S]\[00\]\s+.+\s+.\/def\/vehicle\/truck\/(?&lt;truck&gt;.+)\/data.sii.</Value>
+    </Setting>
+    <Setting Name="gameATS" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="personalDir" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>
