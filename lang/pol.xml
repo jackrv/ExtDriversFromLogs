@@ -22,10 +22,10 @@
         <groupLanguage>Język</groupLanguage>
         <groupOptionSearch>Opcje wyszukania</groupOptionSearch>
         <chckById>Wyszukaj po ID</chckById>
-        <chckByTag>Wyszukaj po Tag</chckByTag>
-        <chckCCase>Wielkość liter</chckCCase>
+        <chckByTag>Wyszukaj po Tagu</chckByTag>
+        <chckCCase>Bierz pod uwagę wielkość liter</chckCCase>
         <btnSave>Zapisz</btnSave>
-        <groupRegLine>Główne wyrażenie</groupRegLine>
+        <groupRegLine>Linia wyrażenia regularnego</groupRegLine>
         <lblRegAttention>Nie modyfikuj o ile nie wiesz co to jest!</lblRegAttention>
         <btnRestore>Przywróć domyślne</btnRestore>
     </optionsForm>
