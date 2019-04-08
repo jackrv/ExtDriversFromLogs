@@ -28,7 +28,7 @@ namespace ExtDriversFromLogs.Properties {
         [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<Language name=\"English\">\r\n  <mainForm>\r" +
             "\n    <colTruck>Truck</colTruck>\r\n    <colTag>Tag</colTag>\r\n    <colNickname>Game" +
             " Nickname</colNickname>\r\n    <colGameID>Game ID</colGameID>\r\n    <groupOpen>Open" +
-            " log</groupOpen>\r\n    <btnOpen>Form today</btnOpen>\r\n    <btnOpenYesterday>From " +
+            " log</groupOpen>\r\n    <btnOpen>From today</btnOpen>\r\n    <btnOpenYesterday>From " +
             "yesterday</btnOpenYesterday>\r\n    <btnOpenAnother>Open file</btnOpenAnother>\r\n  " +
             "  <selectGame>Select game</selectGame>\r\n    <groupSearch>Search</groupSearch>\r\n " +
             "   <btnOptions>Options</btnOptions>\r\n    <btnExit>Exit</btnExit>\r\n    <menuOpenP" +
@@ -128,7 +128,7 @@ namespace ExtDriversFromLogs.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"\[(?<tHours>[\d{2}]+):(?<tMinutes>[\d{2}]+):(?<tSeconds>[\d{2}]+)\]\s+Spawning\s+GameTruck\s+\((?<name>.+)\((?<gameID>\d+)\)\s+-\s+TruckersMP\s+ID:(?<ets2mpID>\d+)(?<adInfo>.*)\)\s+Additional\s+data:\s+(?<adData>.+)[\s\S]\[00\]\s+.+\s+.\/def\/vehicle\/truck\/(?<truck>.+)\/data.sii.")]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"\[(?<tHours>[\d{2}]+):(?<tMinutes>[\d{2}]+):(?<tSeconds>[\d{2}]+)\]\s+Spawning\s+GameTruck\s+\((?<name>.+)\((?<gameID>\d+)\)\s+-\s+(TruckersMP\s+ID:|TMPID:\s|ETS2MPId:)(?<ets2mpID>\d+)(?<adInfo>.*)\)\s+Additional\s+data:\s+(?<adData>.+)[\s\S]\[00\]\s+.+\s+.\/def\/vehicle\/truck\/(?<truck>.+)\/data.sii.")]
         public string regPattern {
             get {
                 return ((string)(this["regPattern"]));

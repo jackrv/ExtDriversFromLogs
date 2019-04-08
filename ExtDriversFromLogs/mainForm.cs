@@ -50,6 +50,9 @@ namespace ExtDriversFromLogs
                         case "man.tgx":
                             truckName = "MAN TGX";
                             break;
+                        case "man.tgx_euro6":
+                            truckName = "MAN TGX Euro6";
+                            break;
                         case "mercedes.actros":
                             truckName = "Mercedes Actros";
                             break;
@@ -94,6 +97,9 @@ namespace ExtDriversFromLogs
                             break;
                         case "kenworth.w900":
                             truckName = "Kenworth W900";
+                            break;
+                        case "volvo.vnl":
+                            truckName = "Volvo VNL";
                             break;
                     }
                 }
