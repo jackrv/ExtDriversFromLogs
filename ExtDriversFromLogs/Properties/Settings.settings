@@ -11,7 +11,7 @@
     &lt;colNickname&gt;Game Nickname&lt;/colNickname&gt;
     &lt;colGameID&gt;Game ID&lt;/colGameID&gt;
     &lt;groupOpen&gt;Open log&lt;/groupOpen&gt;
-    &lt;btnOpen&gt;Form today&lt;/btnOpen&gt;
+    &lt;btnOpen&gt;From today&lt;/btnOpen&gt;
     &lt;btnOpenYesterday&gt;From yesterday&lt;/btnOpenYesterday&gt;
     &lt;btnOpenAnother&gt;Open file&lt;/btnOpenAnother&gt;
     &lt;selectGame&gt;Select game&lt;/selectGame&gt;

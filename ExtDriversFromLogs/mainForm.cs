@@ -50,6 +50,9 @@ namespace ExtDriversFromLogs
                         case "man.tgx":
                             truckName = "MAN TGX";
                             break;
+                        case "man.tgx_euro6":
+                            truckName = "MAN TGX Euro6";
+                            break;
                         case "mercedes.actros":
                             truckName = "Mercedes Actros";
                             break;
@@ -63,20 +66,29 @@ namespace ExtDriversFromLogs
                             truckName = "Renault Premium";
                             break;
                         case "scania.r":
-                            truckName = "Scania R";
+                            truckName = "Scania R 2012";
                             break;
                         case "scania.streamline":
                             truckName = "Scania StreamLine";
                             break;
+						case "scania.r_2016":
+							truckName = "Scania R";
+							break;
+						case "scania.s_2016":
+							truckName = "Scania S";
+							break;
                         case "volvo.fh16":
-                            truckName = "Volvo FH16 (2009)";
+                            truckName = "Volvo FH16 2009";
                             break;
                         case "volvo.fh16_2012":
-                            truckName = "Volvo FH16 (2012)";
+                            truckName = "Volvo FH16 2012";
                             break;
                         case "skoda.superb":
                             truckName = "Scout Super_D";
                             break;
+						case "peterbilt.389":
+							truckName = "Peterbilt 389";
+							break;
                         case "peterbilt.579":
                             truckName = "Peterbilt 579";
                             break;
@@ -85,6 +97,9 @@ namespace ExtDriversFromLogs
                             break;
                         case "kenworth.w900":
                             truckName = "Kenworth W900";
+                            break;
+                        case "volvo.vnl":
+                            truckName = "Volvo VNL";
                             break;
                     }
                 }
